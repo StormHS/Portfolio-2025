@@ -2,7 +2,7 @@
     <section class="hero">
       <div class="hero-content">
         <h1>Kia ora, welcome! I'm <span>Storm</span>.</h1>
-        <p>Software Engineer | Creative Technologist | Problem Solver</p>
+        <p>Web Development | Tech Specialist | Problem Solver</p>
       </div>
     </section>
   </template>
