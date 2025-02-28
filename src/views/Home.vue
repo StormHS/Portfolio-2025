@@ -3,11 +3,11 @@
       <Header />
       <Hero />
       <About />
-      <!-- <Projects /> -->
+      <Projects />
       <Education />
-      <!-- <Video />
+      <!-- <Video /> -->
       <Contact />
-      <Footer /> -->
+      <!-- <Footer /> -->
     </div>
   </template>
   
@@ -15,10 +15,10 @@
   import Header from "@/components/Header.vue";
   import Hero from "@/components/Hero.vue";
   import About from "@/components/About.vue";
-  // import Projects from "@/components/Projects.vue";
+  import Projects from "@/components/Projects.vue";
   import Education from "@/components/Education.vue";
   // import Video from "@/components/IntroVideo.vue";
-  // import Contact from "@/components/Contact.vue";
+  import Contact from "@/components/Contact.vue";
   // import Footer from "@/components/Footer.vue";
   </script>
   
