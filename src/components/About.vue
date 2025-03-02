@@ -2,75 +2,49 @@
   <section id="about" class="about">
     <div class="about-content">
       <h2>About Me</h2>
-      <p>
-        I'm a software engineer passionate about building **intuitive, scalable,
-        and efficient applications**. I specialize in **Vue 3, Nuxt 3, Firebase,
-        and Tailwind CSS**, creating user-friendly and high-performing web
-        solutions.
-      </p>
+      <div class="about-container">
+        <img
+          src="@/assets/images/profile-picture.png"
+          alt="Profile Picture"
+          class="profile-img"
+        />
 
-      <!-- Tabs for Skills / Experience -->
-      <div class="tabs">
-        <button
-          @click="activeTab = 'skills'"
-          :class="{ active: activeTab === 'skills' }"
-        >
-          Skills
-        </button>
-        <button
-          @click="activeTab = 'experience'"
-          :class="{ active: activeTab === 'experience' }"
-        >
-          Experience
-        </button>
-      </div>
-
-      <!-- Tab Content -->
-      <div v-if="activeTab === 'skills'" class="tab-content">
-        <ul>
-          <li>🚀 Vue 3, Nuxt 3, JavaScript (ES6+), Firebase</li>
-          <li>🎨 Tailwind CSS, SCSS, UI/UX design principles</li>
-          <li>🛠 Git, GitHub, Agile development, Pair programming</li>
-          <li>🔧 Problem-solving & system architecture</li>
-        </ul>
-      </div>
-
-      <div v-if="activeTab === 'experience'" class="tab-content">
-        <ul>
-          <li>
-            💼 **Intern at PixelWorld** – Developed interactive web apps,
-            integrated Open Graph metadata, and built reusable components.
-          </li>
-          <li>
-            📌 **Dev Academy Graduate** – Built full-stack projects in
-            JavaScript & Vue, collaborating in remote teams.
-          </li>
-          <li>
-            🌍 **Freelance Web Development** – Worked on dynamic, multi-language
-            Webflow sites for businesses.
-          </li>
-        </ul>
+        <p>
+          I'm a Web Developer specializing in building clean and intuitive
+          applications. I focus on performance, usability, and modern design,
+          turning ideas into seamless digital experiences. Whether you need a
+          dynamic web app, support with marketing & search engine optimization
+          or a minimalist, high-performing site, I bring technical expertise and
+          creative problem-solving to every project. Let’s think big and create
+          something amazing.
+        </p>
       </div>
     </div>
   </section>
 </template>
 
-<script setup>
-import { ref } from "vue";
-const activeTab = ref("skills");
-</script>
-
 <style scoped lang="scss">
 .about {
   padding: 5rem 10%;
-  text-align: center;
   background: #111;
   color: #fff;
+  display: flex;
+  justify-content: center;
 }
 
-.about-content {
-  max-width: 800px;
-  margin: 0 auto;
+.about-container {
+  display: flex;
+  align-items: center;
+  max-width: 1100px;
+  gap: 2rem;
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ff004f;
 }
 
 h2 {
@@ -82,44 +56,6 @@ p {
   font-size: 1.2rem;
   margin-top: 1rem;
   opacity: 0.8;
-}
-
-/* Tabs */
-.tabs {
-  margin-top: 2rem;
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-}
-
-button {
-  background: transparent;
-  border: 2px solid #ff004f;
-  padding: 0.8rem 1.5rem;
-  cursor: pointer;
-  font-size: 1rem;
-  color: white;
-  transition: 0.3s ease;
-}
-
-button.active,
-button:hover {
-  background: #ff004f;
-}
-
-/* Tab Content */
-.tab-content {
-  margin-top: 1.5rem;
-  text-align: left;
-}
-
-.tab-content ul {
-  list-style: none;
-  padding: 0;
-}
-
-.tab-content li {
-  font-size: 1.1rem;
-  padding: 0.5rem 0;
+  text-align: justify;
 }
 </style>

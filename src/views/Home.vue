@@ -7,7 +7,7 @@
       <Education />
       <!-- <Video /> -->
       <Contact />
-      <!-- <Footer /> -->
+      <Footer />
     </div>
   </template>
   
@@ -19,7 +19,7 @@
   import Education from "@/components/Education.vue";
   // import Video from "@/components/IntroVideo.vue";
   import Contact from "@/components/Contact.vue";
-  // import Footer from "@/components/Footer.vue";
+  import Footer from "@/components/Footer.vue";
   </script>
   
   <style scoped lang="scss">
