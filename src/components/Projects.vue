@@ -1,6 +1,6 @@
 <template>
   <section id="projects" class="projects">
-    <h2>Projects</h2>
+    <div class="header">Projects</div>
     <div class="projects-grid">
       <div class="project" v-for="project in projects" :key="project.id">
         <iframe
@@ -66,7 +66,7 @@ const projects = [
   color: #fff;
 }
 
-h2 {
+.header {
   font-size: clamp(2rem, 5vw, 3rem);
   color: #ff004f;
   margin-bottom: 2rem;

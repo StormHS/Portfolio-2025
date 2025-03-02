@@ -1,7 +1,7 @@
 <template>
   <section id="about" class="about">
     <div class="about-content">
-      <h2>About Me</h2>
+      <div class="header">About Me</div>
       <div class="about-container">
         <img
           src="@/assets/images/profile-picture.png"
@@ -9,7 +9,7 @@
           class="profile-img"
         />
 
-        <p>
+        <div class="description">
           I'm a Web Developer specializing in building clean and intuitive
           applications. I focus on performance, usability, and modern design,
           turning ideas into seamless digital experiences. Whether you need a
@@ -17,7 +17,7 @@
           or a minimalist, high-performing site, I bring technical expertise and
           creative problem-solving to every project. Let’s think big and create
           something amazing.
-        </p>
+        </div>
       </div>
     </div>
   </section>
@@ -47,12 +47,12 @@
   border: 3px solid #ff004f;
 }
 
-h2 {
+.header {
   font-size: clamp(2rem, 5vw, 3rem);
   color: #ff004f;
 }
 
-p {
+.description {
   font-size: 1.2rem;
   margin-top: 1rem;
   opacity: 0.8;
