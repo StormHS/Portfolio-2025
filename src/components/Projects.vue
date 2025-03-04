@@ -1,7 +1,9 @@
 <template>
   <section id="projects" class="projects">
     <div class="header">Projects</div>
-    <div class="projects-grid">
+
+    <!-- Projects List (Carousel on Mobile) -->
+    <div class="projects-list" ref="carousel">
       <div class="project" v-for="project in projects" :key="project.id">
         <iframe
           :src="project.video"
@@ -14,47 +16,39 @@
         <p>{{ project.description }}</p>
       </div>
     </div>
+
+    <!-- Carousel Navigation Buttons -->
+    <div class="carousel-buttons">
+      <button @click="scrollLeft">←</button>
+      <button @click="scrollRight">→</button>
+    </div>
   </section>
 </template>
 
 <script setup>
+import { ref } from "vue";
+
+const carousel = ref(null);
+
+const scrollLeft = () => {
+  if (carousel.value) {
+    carousel.value.scrollBy({ left: -300, behavior: "smooth" });
+  }
+};
+
+const scrollRight = () => {
+  if (carousel.value) {
+    carousel.value.scrollBy({ left: 300, behavior: "smooth" });
+  }
+};
+
 const projects = [
-  {
-    id: 1,
-    title: "Paw Print Petition",
-    video: "https://www.youtube.com/embed/KgxpTjTQ06A?si=CMtR8b8JrzKwCOax",
-    description: "Placeholder description for Paw Print Petition.",
-  },
-  {
-    id: 2,
-    title: "Fruju Frenzy",
-    video: "https://www.youtube.com/embed/v4j6kG1ys9c?si=8K1lO75HPuaDh8ZX",
-    description: "Placeholder description for Fruju Frenzy.",
-  },
-  {
-    id: 3,
-    title: "Cadbury Unwrap the Thrill",
-    video: "https://www.youtube.com/embed/BcD08RJL3XA?si=Eh_e1j4b2rsGcJVa",
-    description: "Placeholder description for Cadbury Unwrap the Thrill.",
-  },
-  {
-    id: 4,
-    title: "JDE Recipes",
-    video: "https://www.youtube.com/embed/4QdMAXHRGG8?si=hAQGQLbC1gynr_Lr",
-    description: "Placeholder description for JDE Recipes.",
-  },
-  {
-    id: 5,
-    title: "To Do To Day",
-    video: "https://www.youtube.com/embed/KeNulF84yxE?si=VAYXO5Q8n7oxohlU",
-    description: "Placeholder description for To Do To Day.",
-  },
-  {
-    id: 6,
-    title: "Apprendre Le Français",
-    video: "https://www.youtube.com/embed/jmThDo7qdas?si=69Y1kv6CFKVTvZg7",
-    description: "Placeholder description for Apprendre Le Français.",
-  },
+  { id: 1, title: "Paw Print Petition", video: "https://www.youtube.com/embed/KgxpTjTQ06A?si=CMtR8b8JrzKwCOax", description: "Placeholder description for Paw Print Petition." },
+  { id: 2, title: "Fruju Frenzy", video: "https://www.youtube.com/embed/v4j6kG1ys9c?si=8K1lO75HPuaDh8ZX", description: "Placeholder description for Fruju Frenzy." },
+  { id: 3, title: "Cadbury Unwrap the Thrill", video: "https://www.youtube.com/embed/BcD08RJL3XA?si=Eh_e1j4b2rsGcJVa", description: "Placeholder description for Cadbury Unwrap the Thrill." },
+  { id: 4, title: "JDE Recipes", video: "https://www.youtube.com/embed/4QdMAXHRGG8?si=hAQGQLbC1gynr_Lr", description: "Placeholder description for JDE Recipes." },
+  { id: 5, title: "To Do To Day", video: "https://www.youtube.com/embed/KeNulF84yxE?si=VAYXO5Q8n7oxohlU", description: "Placeholder description for To Do To Day." },
+  { id: 6, title: "Apprendre Le Français", video: "https://www.youtube.com/embed/jmThDo7qdas?si=69Y1kv6CFKVTvZg7", description: "Placeholder description for Apprendre Le Français." }
 ];
 </script>
 
@@ -72,19 +66,26 @@ const projects = [
   margin-bottom: 2rem;
 }
 
-/* Grid Layout */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  gap: 2rem;
-  margin: 0 auto;
-
-  @media (min-width: 768px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
+/* Mobile: Horizontal Scroll Carousel */
+.projects-list {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  scrollbar-width: none; /* Hide scrollbar in Firefox */
+  -ms-overflow-style: none; /* Hide scrollbar in IE */
 }
 
+/* Hide scrollbar in Webkit (Chrome, Safari) */
+.projects-list::-webkit-scrollbar {
+  display: none;
+}
+
+/* Each project item */
 .project {
+  flex: 0 0 80%;
+  scroll-snap-align: center;
   background: #111;
   padding: 1.5rem;
   border-radius: 8px;
@@ -92,12 +93,32 @@ const projects = [
   text-align: center;
 }
 
+/* Iframe (Video) */
 .project iframe {
   width: 100%;
   height: 300px;
   border-radius: 8px;
 }
 
+/* Desktop: Grid Layout */
+@media (min-width: 768px) {
+  .projects-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    overflow-x: visible; /* Remove scrolling effect */
+  }
+
+  .project {
+    flex: none;
+  }
+
+  .carousel-buttons {
+    display: none;
+  }
+}
+
+/* Text */
 h3 {
   font-size: 1.5rem;
   margin-top: 1rem;
@@ -108,5 +129,27 @@ p {
   font-size: 1.1rem;
   opacity: 0.8;
   margin-top: 0.5rem;
+}
+
+/* Carousel Buttons */
+.carousel-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.carousel-buttons button {
+  background: #ff004f;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.2rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+  border-radius: 5px;
+}
+
+.carousel-buttons button:hover {
+  background: #ff3366;
 }
 </style>
