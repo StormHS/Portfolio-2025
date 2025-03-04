@@ -43,12 +43,42 @@ const scrollRight = () => {
 };
 
 const projects = [
-  { id: 1, title: "Paw Print Petition", video: "https://www.youtube.com/embed/KgxpTjTQ06A?si=CMtR8b8JrzKwCOax", description: "Placeholder description for Paw Print Petition." },
-  { id: 2, title: "Fruju Frenzy", video: "https://www.youtube.com/embed/v4j6kG1ys9c?si=8K1lO75HPuaDh8ZX", description: "Placeholder description for Fruju Frenzy." },
-  { id: 3, title: "Cadbury Unwrap the Thrill", video: "https://www.youtube.com/embed/BcD08RJL3XA?si=Eh_e1j4b2rsGcJVa", description: "Placeholder description for Cadbury Unwrap the Thrill." },
-  { id: 4, title: "JDE Recipes", video: "https://www.youtube.com/embed/4QdMAXHRGG8?si=hAQGQLbC1gynr_Lr", description: "Placeholder description for JDE Recipes." },
-  { id: 5, title: "To Do To Day", video: "https://www.youtube.com/embed/KeNulF84yxE?si=VAYXO5Q8n7oxohlU", description: "Placeholder description for To Do To Day." },
-  { id: 6, title: "Apprendre Le Français", video: "https://www.youtube.com/embed/jmThDo7qdas?si=69Y1kv6CFKVTvZg7", description: "Placeholder description for Apprendre Le Français." }
+  {
+    id: 1,
+    title: "Paw Print Petition",
+    video: "https://www.youtube.com/embed/KgxpTjTQ06A?si=CMtR8b8JrzKwCOax",
+    description: "Placeholder description for Paw Print Petition.",
+  },
+  {
+    id: 2,
+    title: "Fruju Frenzy",
+    video: "https://www.youtube.com/embed/v4j6kG1ys9c?si=8K1lO75HPuaDh8ZX",
+    description: "Placeholder description for Fruju Frenzy.",
+  },
+  {
+    id: 3,
+    title: "Cadbury Unwrap the Thrill",
+    video: "https://www.youtube.com/embed/BcD08RJL3XA?si=Eh_e1j4b2rsGcJVa",
+    description: "Placeholder description for Cadbury Unwrap the Thrill.",
+  },
+  {
+    id: 4,
+    title: "JDE Recipes",
+    video: "https://www.youtube.com/embed/4QdMAXHRGG8?si=hAQGQLbC1gynr_Lr",
+    description: "Placeholder description for JDE Recipes.",
+  },
+  {
+    id: 5,
+    title: "To Do To Day",
+    video: "https://www.youtube.com/embed/KeNulF84yxE?si=VAYXO5Q8n7oxohlU",
+    description: "Placeholder description for To Do To Day.",
+  },
+  {
+    id: 6,
+    title: "Apprendre Le Français",
+    video: "https://www.youtube.com/embed/jmThDo7qdas?si=69Y1kv6CFKVTvZg7",
+    description: "Placeholder description for Apprendre Le Français.",
+  },
 ];
 </script>
 
