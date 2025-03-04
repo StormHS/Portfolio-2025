@@ -6,7 +6,9 @@
     <!-- Hero Content -->
     <div class="hero-content">
       <div class="fade-in header"><span>W</span>elcome!</div>
-      <div class="fade-in glow-effect">Web Development | Tech Specialist | Creative Solutions</div>
+      <div class="fade-in glow-effect">
+        Web Development | Tech Specialist | Creative Solutions
+      </div>
     </div>
   </section>
 </template>
@@ -32,9 +34,14 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: url("@/assets/images/hero-background.gif") no-repeat center center/cover;
-  z-index: 100;
 
+  z-index: 100;
+  justify-content: flex-end;
+
+  @media (min-width: 768px) {
+    background: url("@/assets/images/hero-background.gif") no-repeat center
+      center/cover;
+  }
 }
 
 /* Text Animation */
