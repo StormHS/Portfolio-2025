@@ -48,8 +48,8 @@
 }
 
 .education-content {
-  max-width: 800px;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 
 h2 {
@@ -60,8 +60,8 @@ h2 {
 
 /* Education List */
 .education-list {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
 }
 

@@ -36,7 +36,12 @@
   display: flex;
   align-items: center;
   max-width: 1100px;
-  gap: 2rem;
+  gap: 1.5rem;
+  flex-direction: column;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
 }
 
 .profile-img {
@@ -45,6 +50,10 @@
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid #ff004f;
+  margin-top: 2rem;
+  @media (min-width: 768px) {
+    margin-top: 0;
+  }
 }
 
 .header {
@@ -56,6 +65,10 @@
   font-size: 1.2rem;
   margin-top: 1rem;
   opacity: 0.8;
-  text-align: justify;
+  text-align: center;
+
+  @media (min-width: 768px) {
+    text-align: justify;
+  }
 }
 </style>
