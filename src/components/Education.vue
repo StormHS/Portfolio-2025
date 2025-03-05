@@ -4,7 +4,11 @@
       <h2>Education</h2>
 
       <div class="education-list" ref="carousel">
-        <div class="education-item" v-for="(item, index) in educationData" :key="index">
+        <div
+          class="education-item"
+          v-for="(item, index) in educationData"
+          :key="index"
+        >
           <h3>{{ item.title }}</h3>
           <p v-if="item.certification">{{ item.certification }}</p>
           <p v-if="item.duration" class="duration">{{ item.duration }}</p>
@@ -41,9 +45,22 @@ const scrollRight = () => {
 };
 
 const educationData = [
-  { title: "💻 Dev Academy", certification: "Certificate in Applied Software Development", duration: "2023" },
-  { title: "✨ Curious Refuge", certification: "AI - Marketing and Advertisement", duration: "2024 - Ongoing" },
-  { title: "📚 NorthTec", certification: "Bachelor of Social Work | Cert in Mental Health & Addiction", duration: "2018 - 2021" },
+  {
+    title: "💻 Dev Academy",
+    certification: "Certificate in Applied Software Development",
+    duration: "2023",
+  },
+  {
+    title: "✨ Curious Refuge",
+    certification: "AI - Marketing and Advertisement",
+    duration: "2024 - Ongoing",
+  },
+  {
+    title: "📚 NorthTec",
+    certification:
+      "Bachelor of Social Work | Cert in Mental Health & Addiction",
+    duration: "2018 - 2021",
+  },
   {
     title: "🎓 Additional Certifications",
     additional: [
@@ -52,9 +69,9 @@ const educationData = [
       "Te Tiriti & Cultural Safety Training (2022)",
       "BE Accessible - Accessibility Training (2021)",
       "Sign Language 3-Month Course (2018 & 2020)",
-      "Gender & Sexuality 101 (2020)"
-    ]
-  }
+      "Gender & Sexuality 101 (2020)",
+    ],
+  },
 ];
 </script>
 

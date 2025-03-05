@@ -48,6 +48,10 @@ const closeMenu = () => {
   align-items: center;
   justify-content: space-between;
   box-sizing: border-box;
+
+  @media (min-width: 768px) {
+    padding: 0;
+  }
 }
 
 /* HAMBURGER MENU ICON */
@@ -106,6 +110,9 @@ ul {
   transition: right 0.4s ease-in-out;
   z-index: 1050; /* Ensure above content */
 
+  @media (min-width: 768px) {
+    padding-top: 0;
+  }
   /* When active, slide in */
   &.nav-active {
     right: 0;
@@ -114,9 +121,17 @@ ul {
   a {
     text-decoration: none;
     color: black;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: bold;
     transition: color 0.3s;
+
+
+  @media (min-width: 768px) {
+    color: white;
+    font-size: 0.8rem;
+
+
+  }
   }
 
   // a:hover {

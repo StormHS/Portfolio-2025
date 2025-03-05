@@ -2,22 +2,24 @@
   <section id="projects" class="projects">
     <div class="header">Projects</div>
 
-    <!-- Projects List (Carousel on Mobile) -->
+    <!-- Projects List (Carousel on Mobile, Grid on Desktop) -->
     <div class="projects-list" ref="carousel">
       <div class="project" v-for="project in projects" :key="project.id">
-        <iframe
-          :src="project.video"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-        ></iframe>
+        <div class="video-container">
+          <iframe
+            :src="project.video"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
         <h3>{{ project.title }}</h3>
         <p>{{ project.description }}</p>
       </div>
     </div>
 
-    <!-- Carousel Navigation Buttons -->
+    <!-- Carousel Navigation Buttons (Only visible on mobile) -->
     <div class="carousel-buttons">
       <button @click="scrollLeft">←</button>
       <button @click="scrollRight">→</button>
@@ -123,11 +125,21 @@ const projects = [
   text-align: center;
 }
 
-/* Iframe (Video) */
-.project iframe {
+/* VIDEO CONTAINER (Maintains 16:9 Ratio) */
+.video-container {
+  position: relative;
   width: 100%;
-  height: 300px;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  overflow: hidden;
   border-radius: 8px;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 /* Desktop: Grid Layout */
@@ -143,8 +155,9 @@ const projects = [
     flex: none;
   }
 
+  /* Hide Carousel Buttons on Desktop */
   .carousel-buttons {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -161,12 +174,16 @@ p {
   margin-top: 0.5rem;
 }
 
-/* Carousel Buttons */
+/* Carousel Buttons (Only show on mobile) */
 .carousel-buttons {
   display: flex;
   justify-content: center;
   gap: 1rem;
   margin-top: 1rem;
+
+  @media (min-width: 768px) {
+    display: none; /* Hide on desktop */
+  }
 }
 
 .carousel-buttons button {
