@@ -4,11 +4,7 @@
       <h2>Education</h2>
 
       <div class="education-list" ref="carousel">
-        <div
-          class="education-item"
-          v-for="(item, index) in educationData"
-          :key="index"
-        >
+        <div class="education-item" v-for="(item, index) in educationData" :key="index">
           <h3>{{ item.title }}</h3>
           <p v-if="item.certification">{{ item.certification }}</p>
           <p v-if="item.duration" class="duration">{{ item.duration }}</p>
@@ -18,7 +14,7 @@
         </div>
       </div>
 
-      <!-- Navigation Buttons for Carousel -->
+      <!-- Navigation Buttons for Carousel (Only visible on mobile) -->
       <div class="carousel-buttons">
         <button @click="scrollLeft">←</button>
         <button @click="scrollRight">→</button>
@@ -45,22 +41,9 @@ const scrollRight = () => {
 };
 
 const educationData = [
-  {
-    title: "💻 Dev Academy",
-    certification: "Certificate in Applied Software Development",
-    duration: "2023",
-  },
-  {
-    title: "✨ Curious Refuge",
-    certification: "AI - Marketing and Advertisement",
-    duration: "2024 - Ongoing",
-  },
-  {
-    title: "📚 NorthTec",
-    certification:
-      "Bachelor of Social Work | Cert in Mental Health & Addiction",
-    duration: "2018 - 2021",
-  },
+  { title: "💻 Dev Academy", certification: "Certificate in Applied Software Development", duration: "2023" },
+  { title: "✨ Curious Refuge", certification: "AI - Marketing and Advertisement", duration: "2024 - Ongoing" },
+  { title: "📚 NorthTec", certification: "Bachelor of Social Work | Cert in Mental Health & Addiction", duration: "2018 - 2021" },
   {
     title: "🎓 Additional Certifications",
     additional: [
@@ -69,9 +52,9 @@ const educationData = [
       "Te Tiriti & Cultural Safety Training (2022)",
       "BE Accessible - Accessibility Training (2021)",
       "Sign Language 3-Month Course (2018 & 2020)",
-      "Gender & Sexuality 101 (2020)",
-    ],
-  },
+      "Gender & Sexuality 101 (2020)"
+    ]
+  }
 ];
 </script>
 
@@ -122,8 +105,9 @@ const educationData = [
     flex: none;
   }
 
+  /* Hide Carousel Buttons on Desktop */
   .carousel-buttons {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -156,12 +140,16 @@ ul {
   margin-top: 0.5rem;
 }
 
-/* Carousel Buttons */
+/* Carousel Buttons (Only show on mobile) */
 .carousel-buttons {
   display: flex;
   justify-content: center;
   gap: 1rem;
   margin-top: 1rem;
+
+  @media (min-width: 768px) {
+    display: none; /* Hide on desktop */
+  }
 }
 
 .carousel-buttons button {
