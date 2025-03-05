@@ -1,6 +1,7 @@
 <template>
   <section id="projects" class="projects">
     <div class="header">Projects</div>
+    <hr class="line"/>
 
     <!-- Projects List (Carousel on Mobile, Grid on Desktop) -->
     <div class="projects-list" ref="carousel">
@@ -96,6 +97,12 @@ const projects = [
   font-size: clamp(2rem, 5vw, 3rem);
   color: #ff004f;
   margin-bottom: 2rem;
+}
+
+.line {
+  border: none;
+height: 3px;
+background: #3a33ff;
 }
 
 /* Mobile: Horizontal Scroll Carousel */

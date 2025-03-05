@@ -40,8 +40,7 @@ const closeMenu = () => {
   background: #ff004f;
   width: 100%;
   max-width: 100vw;
-  position: fixed;
-  top: 0;
+  position: relative;
   z-index: 1000;
   padding: 1rem;
   display: flex;

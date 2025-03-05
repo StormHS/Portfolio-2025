@@ -2,13 +2,14 @@
   <section id="about" class="about">
     <div class="about-content">
       <div class="header">About Me</div>
+      <hr class="line" />
+
       <div class="about-container">
         <img
           src="@/assets/images/profile-picture.png"
           alt="Profile Picture"
           class="profile-img"
         />
-
         <div class="description">
           I'm a Web Developer specializing in building clean and intuitive
           applications. I focus on performance, usability, and modern design,
@@ -44,12 +45,18 @@
   }
 }
 
+.line {
+  border: none;
+  height: 3px;
+  background: #3a33ff;
+}
+
 .profile-img {
   width: 150px;
   height: 150px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid #ff004f;
+  border: 3px solid #ff6a00;
   margin-top: 2rem;
   @media (min-width: 768px) {
     margin-top: 0;

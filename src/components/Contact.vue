@@ -1,6 +1,7 @@
 <template>
   <section id="contact" class="contact">
     <h2>Contact Me</h2>
+    <hr class="line" />
 
     <div class="contact-info">
       <p>📧 storm.harris.studdart@gmail.com</p>
@@ -52,10 +53,16 @@ p {
   gap: 0.5rem;
 }
 
-font-awesome-icon {
-  color: #ff004f;
-  font-size: 1.5rem;
+.line {
+  width: 70%;
+  border: none;
+height: 3px;
+background: #3a33ff;
 }
+// font-awesome-icon {
+//   color: #ff004f;
+//   font-size: 1.5rem;
+// }
 
 /* Contact Button */
 .contact-btn {

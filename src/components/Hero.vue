@@ -5,7 +5,11 @@
 
     <!-- Hero Content -->
     <div class="hero-content">
-      <div class="fade-in header"><span>W</span>elcome!</div>
+      <div class="fade-in header">
+        <span class="w">W</span><span class="e">e</span>lcome!
+      </div>
+      <hr class="line" />
+
       <div class="fade-in glow-effect">
         Web Development | Tech Specialist | Creative Solutions
       </div>
@@ -71,8 +75,19 @@
   position: relative;
 }
 
-.header span {
+.header .w {
   color: #ff004f;
+}
+
+.header .e {
+  color: #ff8000;
+}
+
+.line {
+  width: 70%;
+  border: none;
+  height: 3px;
+  background: #3a33ff;
 }
 
 /* Glow Effect */

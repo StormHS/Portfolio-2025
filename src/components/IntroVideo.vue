@@ -1,6 +1,8 @@
 <template>
   <section id="video" class="video-section">
     <h2>Introduction Video</h2>
+    <hr class="line"/>
+
     <div class="video-container">
       <iframe
         src="https://www.youtube.com/embed/Vmieko8ZaRI?si=s3c6bdPki0qeSQpp"
@@ -27,12 +29,19 @@ h2 {
   margin-bottom: 2rem;
 }
 
+.line {
+  border: none;
+height: 3px;
+background: #3a33ff;
+}
+
 /* Responsive Video Container */
 .video-container {
   position: relative;
   width: 100%;
   margin: 0 auto;
   padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  margin-top: 2rem;
 }
 
 .video-container iframe {
