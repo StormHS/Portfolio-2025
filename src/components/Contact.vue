@@ -4,8 +4,8 @@
     <hr class="line" />
 
     <div class="contact-info">
-      <p>📧 storm.harris.studdart@gmail.com</p>
-      <p>📞 Whatsapp +64 22 616 6313</p>
+      <div class="contact">📧 storm.harris.studdart@gmail.com</div>
+      <div class="contact">📞 Whatsapp +64 22 616 6313</div>
       <!-- <p><a href="https://github.com/StormHS" target="_blank">GitHub</a></p>
       <p>
         <a
@@ -36,16 +36,11 @@ h2 {
   margin-bottom: 1rem;
 }
 
-p {
-  font-size: 1.2rem;
-  opacity: 0.8;
-}
-
 .contact-info {
   margin: 2rem 0;
 }
 
-.contact-info p {
+.contact {
   font-size: 1.2rem;
   display: flex;
   align-items: center;
@@ -56,8 +51,8 @@ p {
 .line {
   width: 70%;
   border: none;
-height: 3px;
-background: #3a33ff;
+  height: 3px;
+  background: #3a33ff;
 }
 // font-awesome-icon {
 //   color: #ff004f;
