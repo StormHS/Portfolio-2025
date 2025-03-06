@@ -4,16 +4,8 @@
     <hr class="line" />
 
     <div class="contact-info">
-      <div class="contact">📧 storm.harris.studdart@gmail.com</div>
-      <div class="contact">📞 Whatsapp +64 22 616 6313</div>
-      <!-- <p><a href="https://github.com/StormHS" target="_blank">GitHub</a></p>
-      <p>
-        <a
-          href="https://www.linkedin.com/in/storm-harris-studdart-803930208/"
-          target="_blank"
-          >LinkedIn</a
-        >
-      </p> -->
+      <div class="contact-item">📧 storm.harris.studdart@gmail.com</div>
+      <div class="contact-item">📞 Whatsapp +64 22 616 6313</div>
     </div>
 
     <a href="mailto:storm.harris.studdart@gmail.com" class="contact-btn"
@@ -24,10 +16,17 @@
 
 <style scoped lang="scss">
 .contact {
+  display: flex;
+  flex-direction: column;
   padding: 5rem 10%;
   text-align: center;
   background: #000;
   color: #fff;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
 }
 
 h2 {
@@ -40,26 +39,13 @@ h2 {
   margin: 2rem 0;
 }
 
-.contact {
-  font-size: 1.2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-}
-
 .line {
   width: 70%;
   border: none;
   height: 3px;
   background: #3a33ff;
 }
-// font-awesome-icon {
-//   color: #ff004f;
-//   font-size: 1.5rem;
-// }
 
-/* Contact Button */
 .contact-btn {
   display: inline-block;
   margin-top: 1.5rem;
