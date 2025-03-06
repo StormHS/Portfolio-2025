@@ -1,6 +1,7 @@
 <template>
   <header class="header">
     <nav>
+    
       <!-- Hamburger / Close Menu Icon -->
       <div class="menu-icon" :class="{ 'open': menuOpen }" @click="toggleMenu">
         <div class="bar"></div>
@@ -8,7 +9,11 @@
         <div class="bar"></div>
       </div>
 
+      <div class="content-container">
       <!-- Mobile Navigation (Slides in from the right) -->
+        <!-- Logo -->
+        <!-- <img src="@/assets/logo.png" alt="Logo" class="logo" /> -->
+
       <ul :class="{ 'nav-active': menuOpen }">
         <li><a href="#about" @click="closeMenu">About</a></li>
         <li><a href="#projects" @click="closeMenu">Projects</a></li>
@@ -16,6 +21,7 @@
         <li><a href="#video" @click="closeMenu">Intro Video</a></li>
         <li><a href="#contact" @click="closeMenu">Contact</a></li>
       </ul>
+    </div>
     </nav>
   </header>
 </template>
@@ -52,6 +58,21 @@ const closeMenu = () => {
     padding: 0;
   }
 }
+
+.content-container {
+  display: flex;
+}
+
+// .logo {
+//   height: 50px; /* Adjust as needed */
+//   width: auto;
+//   margin-right: auto; /* Pushes the nav menu to the right */
+//   margin: 1rem;
+
+//   @media (max-width: 768px) {
+//     height: 40px; /* Slightly smaller on mobile */
+//   }
+// }
 
 /* HAMBURGER MENU ICON */
 .menu-icon {
@@ -99,11 +120,11 @@ ul {
   right: -100%; /* Start hidden off-screen */
   width: 50%;
   height: 100vh;
-  background: #FF0003;
+  background: #ff0003;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content:flex-start;
+  justify-content: flex-start;
   padding-top: 2rem;
   gap: 1rem;
   transition: right 0.4s ease-in-out;
@@ -112,6 +133,7 @@ ul {
   @media (min-width: 768px) {
     padding-top: 0;
   }
+
   /* When active, slide in */
   &.nav-active {
     right: 0;
@@ -124,18 +146,11 @@ ul {
     font-weight: bold;
     transition: color 0.3s;
 
-
-  @media (min-width: 768px) {
-    color: white;
-    font-size: 0.8rem;
-
-
+    @media (min-width: 768px) {
+      color: white;
+      font-size: 0.8rem;
+    }
   }
-  }
-
-  // a:hover {
-  //   color: #000;
-  // }
 
   @media (min-width: 768px) {
     position: static;
