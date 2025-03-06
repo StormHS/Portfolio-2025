@@ -65,11 +65,11 @@ const educationData = [
   {
     title: "🎓 Additional Certifications",
     additional: [
-      "ASSIST Suicide Prevention Training (2022)",
-      "Puawaitahi Sexual Harm Training (2022)",
-      "Te Tiriti & Cultural Safety Training (2022)",
-      "BE Accessible - Accessibility Training (2021)",
-      "Sign Language 3-Month Course (2018 & 2020)",
+      "ASSIST Suicide Prevention (2022)",
+      "Puawaitahi Sexual Harm (2022)",
+      "Te Tiriti & Cultural Safety (2022)",
+      "BE Accessible's, Accessibility (2021)",
+      "Sign Language 3-Month (2018 & 2020)",
       "Gender & Sexuality 101 (2020)",
     ],
   },
