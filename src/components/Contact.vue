@@ -22,7 +22,7 @@
   text-align: center;
   background: #000;
   color: #fff;
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 3vw, 1.5rem);
   display: flex;
   align-items: center;
   justify-content: center;
