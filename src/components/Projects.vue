@@ -1,7 +1,7 @@
 <template>
   <section id="projects" class="projects">
     <div class="header">Projects</div>
-    <hr class="line"/>
+    <hr class="line" />
 
     <!-- Projects List (Carousel on Mobile, Grid on Desktop) -->
     <div class="projects-list" ref="carousel">
@@ -101,8 +101,8 @@ const projects = [
 
 .line {
   border: none;
-height: 3px;
-background: #3a33ff;
+  height: 3px;
+  background: #3a33ff;
 }
 
 /* Mobile: Horizontal Scroll Carousel */
