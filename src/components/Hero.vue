@@ -57,7 +57,7 @@ const commands = {
     "clear - Clear terminal"
   ],
   about: ["Storm is a Vue & Nuxt developer, problem solver, and loves building sleek UI/UX experiences."],
-  skills: ["Vue 3 | Nuxt | Scss | Firebase", "OpenAI | Full-Stack Development", "CSS Wizardry | Debugging Sorcerer 🧙‍♂️"],
+  skills: ["Vue 3 | Nuxt | Firebase", "OpenAI | Full-Stack Development | SCSS Wizardry 🧙‍♂️"],
   projects: ["1. Paw Print Petition", "2. Fruju Frenzy", "3. Cadbury Unwrap the Thrill", "4. JDE Recipes", "5. To Do To Day", "6. Apprendre Le Français"],
   joke: ["Why do programmers prefer dark mode? Because light attracts bugs.", "How many developers does it take to change a light bulb? None. It’s a hardware issue."],
   picture: ["Loading profile picture..."],
