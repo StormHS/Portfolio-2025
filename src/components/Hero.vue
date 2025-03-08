@@ -10,7 +10,7 @@
         <span class="dot red"></span>
         <span class="dot yellow"></span>
         <span class="dot green"></span>
-        <span class="title">storm@triine: ~</span>
+        <span class="title">stormstuddart: ~</span>
       </div>
       <div class="terminal-body">
         <div v-for="(line, index) in output" :key="index" class="terminal-line">
