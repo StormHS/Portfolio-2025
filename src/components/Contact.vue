@@ -31,7 +31,7 @@
 
 h2 {
   font-size: clamp(2rem, 5vw, 3rem);
-  color: #ff004f;
+  color: #00ff00;
   margin-bottom: 1rem;
 }
 
@@ -40,7 +40,7 @@ h2 {
 }
 
 .line {
-  width: 70%;
+  width: 50%;
   border: none;
   height: 3px;
   background: #3a33ff;
@@ -50,8 +50,8 @@ h2 {
   display: inline-block;
   margin-top: 1.5rem;
   padding: 1rem 2rem;
-  background: #ff004f;
-  color: white;
+  background: #00ff00;
+  color: black;
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: bold;
@@ -60,6 +60,6 @@ h2 {
 }
 
 .contact-btn:hover {
-  background: #e60046;
+  background: #fff700;
 }
 </style>

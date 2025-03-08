@@ -95,7 +95,7 @@ const projects = [
 
 .header {
   font-size: clamp(2rem, 5vw, 3rem);
-  color: #ff004f;
+  color: #00ff00;
   margin-bottom: 2rem;
 }
 
@@ -103,6 +103,7 @@ const projects = [
   border: none;
   height: 3px;
   background: #3a33ff;
+  width: 50%;
 }
 
 /* Mobile: Horizontal Scroll Carousel */
@@ -194,8 +195,8 @@ p {
 }
 
 .carousel-buttons button {
-  background: #ff004f;
-  color: white;
+  background: #ff0084;
+  color: black;
   border: none;
   padding: 0.8rem 1.2rem;
   cursor: pointer;
@@ -204,6 +205,6 @@ p {
 }
 
 .carousel-buttons button:hover {
-  background: #ff3366;
+  background: #2b00ff;
 }
 </style>

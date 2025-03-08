@@ -43,7 +43,7 @@ const closeMenu = () => {
 <style scoped lang="scss">
 /* HEADER STYLING */
 .header {
-  background: #ff004f;
+  background: #00ff00;
   width: 100%;
   max-width: 100vw;
   position: relative;
@@ -87,7 +87,7 @@ const closeMenu = () => {
   .bar {
     width: 30px;
     height: 3px;
-    background: #fff;
+    background: black;
     transition: all 0.3s ease-in-out;
   }
 
@@ -147,7 +147,7 @@ ul {
     transition: color 0.3s;
 
     @media (min-width: 768px) {
-      color: white;
+      color: black;
       font-size: 0.8rem;
     }
   }

@@ -48,6 +48,7 @@
 .line {
   border: none;
   height: 3px;
+  width: 50%;
   background: #3a33ff;
 }
 
@@ -65,7 +66,7 @@
 
 .header {
   font-size: clamp(2rem, 5vw, 3rem);
-  color: #ff004f;
+  color: #00ff00;
 }
 
 .description {

@@ -1,7 +1,7 @@
 <template>
   <section id="video" class="video-section">
     <h2>Introduction Video</h2>
-    <hr class="line"/>
+    <hr class="line" />
 
     <div class="video-container">
       <iframe
@@ -25,14 +25,15 @@
 
 h2 {
   font-size: clamp(2rem, 5vw, 3rem);
-  color: #ff004f;
+  color: #00ff00;
   margin-bottom: 2rem;
 }
 
 .line {
   border: none;
-height: 3px;
-background: #3a33ff;
+  height: 3px;
+  background: #3a33ff;
+  width: 50%;
 }
 
 /* Responsive Video Container */

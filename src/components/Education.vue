@@ -132,7 +132,7 @@ const educationData = [
 /* Title & Text */
 h2 {
   font-size: clamp(2rem, 5vw, 3rem);
-  color: #ff004f;
+  color: #00ff00;
   margin-bottom: 2rem;
 }
 
@@ -154,6 +154,7 @@ ul {
 .line {
 border: none;
 height: 3px;
+width: 50%;
 background: #3a33ff;
 }
 
@@ -176,7 +177,7 @@ background: #3a33ff;
 }
 
 .carousel-buttons button {
-  background: #ff004f;
+  background: #2b00ff;
   color: white;
   border: none;
   padding: 0.8rem 1.2rem;
@@ -186,6 +187,6 @@ background: #3a33ff;
 }
 
 .carousel-buttons button:hover {
-  background: #ff3366;
+  background: #ff0084;
 }
 </style>
