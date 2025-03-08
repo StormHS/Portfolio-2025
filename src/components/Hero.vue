@@ -101,7 +101,7 @@ onMounted(() => {
     showLogin.value = false;
     typeEffect([
       "Welcome to Storm's Terminal!",
-      "Type 'help' to see available commands.",
+      "Type 'help' then enter to see available commands.",
     ]);
     inputField.value?.focus();
   }, 1000); // 3 seconds before terminal appears
