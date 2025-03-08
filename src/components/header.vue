@@ -15,6 +15,7 @@
         <!-- <img src="@/assets/logo.png" alt="Logo" class="logo" /> -->
 
       <ul :class="{ 'nav-active': menuOpen }">
+        <li><img class="logo" src="/src/assets/logo.png" ></li>
         <li><a href="#about" @click="closeMenu">About</a></li>
         <li><a href="#projects" @click="closeMenu">Projects</a></li>
         <li><a href="#education" @click="closeMenu">Education</a></li>
@@ -57,6 +58,11 @@ const closeMenu = () => {
   @media (min-width: 768px) {
     padding: 0;
   }
+}
+
+.logo {
+  width: 30px;
+  border-radius: 30px;
 }
 
 .content-container {
