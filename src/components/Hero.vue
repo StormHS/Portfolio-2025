@@ -13,16 +13,23 @@
         <span class="title">storm@triine: ~</span>
       </div>
       <div class="terminal-body">
-        <div v-for="(line, index) in output" :key="index" class="terminal-line">{{ line }}</div>
+        <div v-for="(line, index) in output" :key="index" class="terminal-line">
+          {{ line }}
+        </div>
 
         <!-- Profile Picture Displayed on "picture" Command -->
         <div v-if="showProfilePicture" class="profile-container">
-          <img :src="profileImage" alt="Storm Profile" class="profile-pic">
+          <img :src="profileImage" alt="Storm Profile" class="profile-pic" />
         </div>
 
         <div class="terminal-input">
           <span class="prompt">$</span>
-          <input v-model="command" @keydown.enter="executeCommand" autofocus ref="inputField" />
+          <input
+            v-model="command"
+            @keydown.enter="executeCommand"
+            autofocus
+            ref="inputField"
+          />
           <span class="cursor">█</span>
         </div>
       </div>
@@ -54,14 +61,29 @@ const commands = {
     "projects - List projects",
     "joke - Tell a coding joke",
     "picture - Show profile picture",
-    "clear - Clear terminal"
+    "clear - Clear terminal",
   ],
-  about: ["Storm is a Vue & Nuxt developer, problem solver, and loves building sleek UI/UX experiences."],
-  skills: ["Vue 3 | Nuxt | Firebase", "OpenAI | Full-Stack Development | SCSS Wizardry 🧙‍♂️"],
-  projects: ["1. Paw Print Petition", "2. Fruju Frenzy", "3. Cadbury Unwrap the Thrill", "4. JDE Recipes", "5. To Do To Day", "6. Apprendre Le Français"],
-  joke: ["Why do programmers prefer dark mode? Because light attracts bugs.", "How many developers does it take to change a light bulb? None. It’s a hardware issue."],
+  about: [
+    "Storm is a Vue & Nuxt developer, problem solver, and loves building sleek UI/UX experiences.",
+  ],
+  skills: [
+    "Vue 3 | Nuxt | Firebase",
+    "OpenAI | Full-Stack Development | SCSS Wizardry 🧙‍♂️",
+  ],
+  projects: [
+    "1. Paw Print Petition",
+    "2. Fruju Frenzy",
+    "3. Cadbury Unwrap the Thrill",
+    "4. JDE Recipes",
+    "5. To Do To Day",
+    "6. Apprendre Le Français",
+  ],
+  joke: [
+    "Why do programmers prefer dark mode? Because light attracts bugs.",
+    "How many developers does it take to change a light bulb? None. It’s a hardware issue.",
+  ],
   picture: ["Loading profile picture..."],
-  clear: []
+  clear: [],
 };
 
 // Execute command
@@ -79,7 +101,9 @@ const executeCommand = () => {
       output.value.push(...commands[cmd]);
       showProfilePicture.value = false;
     } else {
-      output.value.push("Command not found. Type 'help' for a list of commands.");
+      output.value.push(
+        "Command not found. Type 'help' for a list of commands."
+      );
       showProfilePicture.value = false;
     }
   }
@@ -249,7 +273,7 @@ input {
 /* SCROLL INDICATOR */
 .scroll-indicator {
   position: absolute;
-  bottom: 20px;
+  bottom: 100px;
   left: 50%;
   transform: translateX(-50%);
   font-size: 24px;
@@ -258,7 +282,8 @@ input {
 }
 
 @keyframes bounce {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateX(-50%) translateY(0);
   }
   50% {
