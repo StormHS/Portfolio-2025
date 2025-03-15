@@ -5,7 +5,7 @@
     <About />
     <Projects />
     <Education />
-    // <Video />
+<!-- <Video /> -->
     <Contact />
     <Footer />
   </div>
