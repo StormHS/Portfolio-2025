@@ -52,31 +52,38 @@ const projects = [
     id: 1,
     title: "Paw Print Petition",
     video: "https://www.youtube.com/embed/KgxpTjTQ06A?si=CMtR8b8JrzKwCOax",
+    description:
+      "A Vue 3, Nuxt 3 Firebase web app where users can sign a petition with their pets paw to ban the public sale of fireworks. This petition reached over 100,000 votes and will be sent to parliment.",
   },
   {
     id: 2,
     title: "Fruju Frenzy",
     video: "https://www.youtube.com/embed/v4j6kG1ys9c?si=8K1lO75HPuaDh8ZX",
+    description: "An interactive Vue 3 game, where players try to tap falling fruit to earn points. Built with Matter.js for physics, animated effects for juice splashes, and a dynamic scoring system",
   },
   {
     id: 3,
     title: "Cadbury Unwrap the Thrill",
     video: "https://www.youtube.com/embed/BcD08RJL3XA?si=Eh_e1j4b2rsGcJVa",
+    description: "A promotional Vue 3 Progressive Web App (PWA) where users enter a unique code from Cadbury packaging to reveal if they win a prize. ",
   },
   {
     id: 4,
     title: "JDE Recipes",
     video: "https://www.youtube.com/embed/4QdMAXHRGG8?si=hAQGQLbC1gynr_Lr",
+    description: "A Vue 3, Nuxt 3 recipe platform for JDE coffee brands, displaying curated recipes. Created a Firebase CMS and utalised Tailwind CSS for styling.",
   },
   {
     id: 5,
     title: "To Do To Day",
     video: "https://www.youtube.com/embed/KeNulF84yxE?si=VAYXO5Q8n7oxohlU",
+    description: "A Javascript task manager web app designed for neurodiverse users, offering customizable task flows, progress tracking, and a distraction-free UI. Personal project during studies, chosen as a final presentation project for Dev Academy",
   },
   {
     id: 6,
     title: "Apprendre Le Français",
     video: "https://www.youtube.com/embed/jmThDo7qdas?si=69Y1kv6CFKVTvZg7",
+    description: "My first personal project designed to help me learn french 🇫🇷",
   },
 ];
 </script>

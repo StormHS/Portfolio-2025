@@ -19,7 +19,7 @@
         <li><a href="#about" @click="closeMenu">About</a></li>
         <li><a href="#projects" @click="closeMenu">Projects</a></li>
         <li><a href="#education" @click="closeMenu">Education</a></li>
-        <li><a href="#video" @click="closeMenu">Intro Video</a></li>
+        <!-- <li><a href="#video" @click="closeMenu">Intro Video</a></li> -->
         <li><a href="#contact" @click="closeMenu">Contact</a></li>
       </ul>
     </div>
