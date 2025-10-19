@@ -30,7 +30,6 @@
             autofocus
             ref="inputField"
           />
-          <span class="cursor">█</span>
         </div>
       </div>
     </div>
